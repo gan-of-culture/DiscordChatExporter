@@ -345,7 +345,7 @@
                     else if (embed.Kind == EmbedKind.Gifv && !string.IsNullOrWhiteSpace(embed.Video?.Url))
                     {
                         <div class="chatlog__embed">
-                            <video class="chatlog__embed-generic-gifv" loop width="@embed.Video.Width" height="@embed.Video.Height" onmouseover="this.play()" onmouseout="this.pause()">
+                            <video class="chatlog__embed-generic-gifv" loop width="@embed.Video.Width" height="@embed.Video.Height">
                                 <source src="@await ResolveUrlAsync(embed.Video.ProxyUrl ?? embed.Video.Url)" alt="Embedded video">
                             </video>
                         </div>
